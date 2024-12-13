@@ -3,16 +3,13 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2024 at 03:38 PM
+-- Generation Time: Dec 13, 2024 at 07:08 AM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- PHP Version: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
-
-CREATE DATABASE IF NOT EXISTS `librarymanagement`;
-USE `librarymanagement`;
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -42,8 +39,8 @@ CREATE TABLE `author` (
 --
 
 INSERT INTO `author` (`ID`, `Firstname`, `Lastname`, `Description`) VALUES
-(1, 'Harper', 'Lee', 'Harper Lee'),
-(4, 'Various', 'Contributors', 'Various Contributors');
+(1, 'Do Minh', 'Ngoc', 'Do Minh Ngoc 1'),
+(4, 'Nguyễn Nhật', 'Ánh', 'Nguyễn Nhật Ánh');
 
 -- --------------------------------------------------------
 
@@ -114,9 +111,9 @@ CREATE TABLE `document` (
 --
 
 INSERT INTO `document` (`ID`, `Name`, `AuthorID`, `Price`, `Description`, `Type`, `Quantity`) VALUES
-(2, 'To Kill a Mockingbird', 1, 12, 'Một câu chuyện', 'BOOK', 2),
-(3, 'Exploring the Roots of Social Injustice in the American South', 1, 123, 'Một nghiên cứu', 'THESIS', 3),
-(4, 'National Geographic', 4, 1234, 'Tạp chí nổi tiếng', 'MAGAZINE', 5);
+(2, 'abc', 1, 12, 'BOOK 4', 'BOOK', 2),
+(3, 'def', 1, 123, '123', 'THESIS', 3),
+(4, 'Demo', 4, 1234, 'Demo', 'MAGAZINE', 5);
 
 -- --------------------------------------------------------
 
@@ -139,7 +136,8 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`ID`, `Firstname`, `Lastname`, `Address`, `Phonenumber`, `Username`, `Password`) VALUES
-(1, 'Lao Van', 'Hung', 'Lang Son', '0766425669', 'admin123', '123456');
+(1, 'Lao Van', 'Hung', 'Lang Son', '0766425669', 'anv123', '123456'),
+(2, 'Đỗ An', 'Duy', 'Thái Bình', '0335989391', 'anduy1512', 'duy15122011');
 
 -- --------------------------------------------------------
 
@@ -160,7 +158,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `Firstname`, `Lastname`, `Address`, `Phonenumber`) VALUES
-(1, 'Lao Văn', 'Hùng', 'Hà Nội', '0766425669');
+(1, 'Nguyễn Văn', 'An', 'Hà Nội', '0123456789');
 
 --
 -- Indexes for dumped tables
@@ -239,7 +237,7 @@ ALTER TABLE `document`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `users`
