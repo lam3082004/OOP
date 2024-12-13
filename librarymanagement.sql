@@ -3,13 +3,16 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2024 at 07:08 AM
+-- Generation Time: Nov 12, 2024 at 03:38 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
+
+CREATE DATABASE IF NOT EXISTS `librarymanagement`;
+USE `librarymanagement`;
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -136,8 +139,7 @@ CREATE TABLE `staff` (
 --
 
 INSERT INTO `staff` (`ID`, `Firstname`, `Lastname`, `Address`, `Phonenumber`, `Username`, `Password`) VALUES
-(1, 'Lao Van', 'Hung', 'Lang Son', '0766425669', 'anv123', '123456'),
-(2, 'Đỗ An', 'Duy', 'Thái Bình', '0335989391', 'anduy1512', 'duy15122011');
+(1, 'Lao Van', 'Hung', 'Lang Son', '0766425669', 'anv123', '123456');
 
 -- --------------------------------------------------------
 
@@ -237,7 +239,7 @@ ALTER TABLE `document`
 -- AUTO_INCREMENT for table `staff`
 --
 ALTER TABLE `staff`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
